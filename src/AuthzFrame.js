@@ -6,12 +6,10 @@ import TokenFrame from './TokenFrame';
 
 import OktaAuth from '@okta/okta-auth-js';
 
-  // TODO:
-  // Didn't find corresponding component in Okta. 
   // NOTE: 
   // In case of implicit flow, it is recommended to use introspection 
   // instead of getting the keys and reading the token. 
-  // Need to confirm with Okta if getKeys needs to be exposed to a client 
+  // Verify with Okta if getKeys needs to be exposed to a client 
 
 
 class AuthzFrame extends Component {
@@ -39,7 +37,6 @@ class AuthzFrame extends Component {
             that.setState({
               responseData: JSON.stringify(token,null,"\t"),
               aToken: token
-              // tValue: token.idToken
             });
         })
         .catch(function(err) {

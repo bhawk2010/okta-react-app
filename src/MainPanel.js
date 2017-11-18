@@ -10,17 +10,15 @@ class MainPanel extends Component {
     super(props);
     
     this.state = {
-          authClient: OktaAuth({url: 'https://bcbsa.oktapreview.com/oauth2/aus9mke3elYu28b8K0h7',
-                              clientId: 'nBOS1NRhVQR4cdDBoL1I',
-                              redirectUri: 'http://localhost:3000/client' 
-//                              redirectUri: 'https://developer.pxcsm.com' 
+          authClient: OktaAuth({url: 'https://your-org.oktapreview.com/oauth2/auth-server-id',
+                              clientId: 'client-app-id',
+                              redirectUri: 'http://your-app.domain.com/route-x' 
                               
                 }),              
       options: {
         responseType: ['id_token', 'token'],
-        // responseType: 'token',
         scopes: ['openid', 'profile', 'email'],
-        nonce: 'test10b',
+        nonce: 'client-genetated-value',
         state: 'test11b'
       }
     };

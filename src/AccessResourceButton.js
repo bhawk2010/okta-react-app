@@ -25,7 +25,7 @@ class AccessResourceButton extends Component {
           <Grid>
             <Navbar.Header>
               <Navbar.Brand>
-                <a href="#">BCBSA</a>
+                <a href="#">Reference Implementation</a>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
@@ -35,7 +35,7 @@ class AccessResourceButton extends Component {
         <Jumbotron>
           <Grid>
             <Row>
-                <Col><h3>BCBSA Secure Application Demo.</h3></Col>
+                <Col><h3>Secure Single Page Application Demo.</h3></Col>
             </Row>            
             <Row>
                 <Col><Button bsStyle="success" onClick={this.handlePanel}>Access Secure Resource</Button></Col>
