@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import AccessResourceButton from './AccessResourceButton';
+
+import { Router, Route, browserHistory } from 'react-router';
+
+const Home = React.createClass({
+  render() {
+    return (
+          <AccessResourceButton isRedirected="false" />
+    );
+  }
+})
+
+const Client = React.createClass({
+  render() {
+    return (
+          <AccessResourceButton isRedirected="true" />
+    );
+  }
+})
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Router history={browserHistory}>
+        <Route path='/' component={Home} />
+        <Route path='/client' component={Client} />
+      </Router>
+    )
   }
 }
 
