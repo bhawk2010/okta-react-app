@@ -30,13 +30,21 @@ Install all dependencies from package.json
 Both client and Okta components need to be configured. The assumption is that you have an account in Okta.
 
 ### Okta
-
+Configure your Okra instance and setup:
 * Auth server configuration
 * Application
 
 ### Client
-
-* Auth server Url.
+The following parameters have to be set in auth js client:
+* Auth server Url
 * Client Id
 * Redirect URL
+
+Modify `MainPanel.js` to enter the parameters:
+
+```js
+          authClient: OktaAuth({url: 'https://your-org.oktapreview.com/oauth2/auth-server-id',
+                              clientId: 'client-app-id',
+                              redirectUri: 'http://your-app.domain.com/route-x' 
+```
 
